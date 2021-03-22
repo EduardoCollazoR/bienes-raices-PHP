@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         //generar un nombre unico
-        $nombreImagen = md5(uniqid(rand(), true)) . "jpg";
+        $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
         //subir la imagen
         move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
 
