@@ -11,9 +11,11 @@
     padding: 1rem 0 3rem 0;
 
     &.inicio {
-
+        background-attachment: fixed;
         background-position: center center;
         background-size: cover;
+
+
 
 
         @include tablet {
