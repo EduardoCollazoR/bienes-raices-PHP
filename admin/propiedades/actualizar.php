@@ -1,12 +1,16 @@
 <?php
+require '../../includes/funciones.php';
+$auth = estaAutenticado();
+if (!$auth) {
+    header('Location:/');
+}
+
 
 //validar la url con id valido
 $id = $_GET['id'];
 $id = filter_var($id, FILTER_VALIDATE_INT);
 
-if (!$id) {
-    header('Location:/admin');
-}
+
 //base de datos
 require '../../includes/config/database.php';
 
@@ -130,7 +134,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
